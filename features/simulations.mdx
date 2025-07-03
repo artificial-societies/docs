@@ -1,0 +1,178 @@
+---
+title: 'Simulations'
+description: 'Run experiments and simulations with your artificial societies'
+icon: 'flask'
+---
+
+## What are Simulations?
+
+Simulations allow you to run controlled experiments with your artificial societies to observe behaviors, test hypotheses, and analyze outcomes. Each simulation creates a virtual environment where your personas interact according to defined rules and parameters.
+
+## Creating a Simulation
+
+To set up a new simulation, you need to configure several key components:
+
+### Basic Setup
+- **Name**: Descriptive name for your simulation
+- **Society**: Which society to use for the experiment
+- **Duration**: How long the simulation should run
+- **Scenario**: What situation or context to simulate
+
+### Parameters
+- **Environment**: The setting and conditions for the simulation
+- **Events**: Specific triggers or situations to introduce
+- **Metrics**: What data to collect and analyze
+
+## Simulation Types
+
+### Communication Simulations
+Test how information flows through your society and how personas respond to messages.
+
+### Decision-Making Simulations
+Observe how groups make decisions and reach consensus on various topics.
+
+### Crisis Response Simulations
+Test how societies handle unexpected events or challenges.
+
+### Social Network Simulations
+Study how relationships and connections evolve over time.
+
+## Running Simulations
+
+### Starting a Simulation
+```javascript
+// Create and start a new simulation
+const simulation = new Simulation({
+  society: 'tech-startup',
+  duration: '7 days',
+  scenario: 'product-launch'
+});
+
+simulation.start();
+```
+
+### Monitoring Progress
+```javascript
+// Check simulation status
+simulation.getStatus();
+
+// Get real-time metrics
+simulation.getMetrics();
+```
+
+### Pausing and Resuming
+```javascript
+// Pause simulation
+simulation.pause();
+
+// Resume simulation
+simulation.resume();
+```
+
+## Example Simulation Configuration
+
+```json
+{
+  "name": "Product Launch Crisis",
+  "society": "tech-startup",
+  "duration": "5 days",
+  "scenario": {
+    "type": "crisis-response",
+    "trigger": "server-outage",
+    "severity": "high"
+  },
+  "metrics": [
+    "response-time",
+    "communication-frequency",
+    "decision-quality",
+    "stress-levels"
+  ],
+  "events": [
+    {
+      "day": 2,
+      "event": "customer-complaints",
+      "intensity": "medium"
+    },
+    {
+      "day": 3,
+      "event": "press-inquiry",
+      "intensity": "high"
+    }
+  ]
+}
+```
+
+## Analyzing Results
+
+### Data Collection
+Simulations automatically collect data on:
+- Communication patterns
+- Decision-making processes
+- Response times
+- Stress levels
+- Network changes
+
+### Visualization
+View results through:
+- Interactive charts and graphs
+- Timeline visualizations
+- Network diagrams
+- Statistical analysis
+
+### Export Options
+```javascript
+// Export simulation results
+simulation.exportResults({
+  format: 'json',
+  includeMetrics: true,
+  includeTimeline: true
+});
+```
+
+## Best Practices
+
+<Tip>
+Start with short simulations (1-3 days) to validate your setup before running longer experiments.
+</Tip>
+
+<Warning>
+Complex simulations with many personas and events can be resource-intensive. Monitor system performance during execution.
+</Warning>
+
+### Simulation Design Tips
+- Define clear objectives before starting
+- Use realistic scenarios and parameters
+- Include control groups when possible
+- Document your assumptions and methodology
+- Run multiple iterations to ensure reliability
+
+## Advanced Features
+
+### Custom Events
+Create custom events to test specific scenarios:
+```javascript
+simulation.addCustomEvent({
+  trigger: 'user-defined-condition',
+  action: 'custom-response',
+  parameters: { /* custom data */ }
+});
+```
+
+### A/B Testing
+Compare different configurations:
+```javascript
+// Run simulation with configuration A
+const resultA = simulation.run(configA);
+
+// Run simulation with configuration B  
+const resultB = simulation.run(configB);
+
+// Compare results
+simulation.compareResults(resultA, resultB);
+```
+
+## Next Steps
+
+- Learn about [Societies](/features/societies) to understand your simulation participants
+- Explore [Personas](/features/personas) to customize individual behaviors
+- Check [Settings](/features/settings) to configure simulation parameters 

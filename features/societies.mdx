@@ -1,0 +1,98 @@
+---
+title: 'Societies'
+description: 'Create and manage artificial societies for your experiments'
+icon: 'users'
+---
+
+## What are Societies?
+
+Societies are collections of personas that interact with each other in your experiments. Each society can have its own rules, behaviors, and communication patterns.
+
+## Creating a Society
+
+To create a new society, you need to define:
+
+### Basic Information
+- **Name**: A descriptive name for your society
+- **Description**: What this society represents or simulates
+- **Size**: Number of personas in the society
+
+### Configuration
+- **Communication Rules**: How personas interact with each other
+- **Behavior Patterns**: Common actions and responses
+- **Network Structure**: How personas are connected
+
+## Society Types
+
+### Small Groups (2-10 personas)
+Perfect for focused experiments and detailed interactions.
+
+### Medium Communities (10-50 personas)
+Good for testing social dynamics and group behaviors.
+
+### Large Populations (50+ personas)
+Ideal for studying emergent behaviors and complex social patterns.
+
+## Managing Societies
+
+### Adding Personas
+```javascript
+// Add a persona to an existing society
+society.addPersona(personaId);
+```
+
+### Removing Personas
+```javascript
+// Remove a persona from a society
+society.removePersona(personaId);
+```
+
+### Updating Rules
+```javascript
+// Update communication rules
+society.updateRules({
+  communicationStyle: 'formal',
+  interactionFrequency: 'daily'
+});
+```
+
+## Example Society Configuration
+
+```json
+{
+  "name": "Tech Startup",
+  "description": "A small tech company with diverse roles",
+  "size": 8,
+  "rules": {
+    "communicationStyle": "collaborative",
+    "hierarchy": "flat",
+    "meetingFrequency": "weekly"
+  },
+  "personas": [
+    "founder",
+    "engineer",
+    "designer",
+    "marketer",
+    "sales",
+    "support",
+    "product-manager",
+    "analyst"
+  ]
+}
+```
+
+## Best Practices
+
+<Tip>
+Start with smaller societies (5-10 personas) to understand the dynamics before scaling up to larger populations.
+</Tip>
+
+<Warning>
+Large societies can become computationally intensive. Monitor performance when working with 100+ personas.
+</Warning>
+
+## Next Steps
+
+- Learn about [Personas](/features/personas) to understand individual members
+- Explore [Experiments](/features/experiments) to run tests with your societies
+- Check [Settings](/features/settings) to configure society parameters 
