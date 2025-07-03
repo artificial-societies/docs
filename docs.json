@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Artificial Societies",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#FEA500",
+    "light": "#FFCD70",
+    "dark": "#8F5D00"
   },
   "favicon": "/favicon.svg",
   "navigation": {
