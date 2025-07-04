@@ -13,7 +13,7 @@
       {
         "group": "Get Started",
         "pages": [
-          "index",
+          "welcome",
           "navigation"
         ]
       },
@@ -55,7 +55,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@societies.io"
       }
     ],
     "primary": {
