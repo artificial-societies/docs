@@ -4,175 +4,49 @@ description: 'Run experiments and simulations with your artificial societies'
 icon: 'flask'
 ---
 
-## What are Simulations?
-
 Simulations allow you to run controlled experiments with your artificial societies to observe behaviors, test hypotheses, and analyze outcomes. Each simulation creates a virtual environment where your personas interact according to defined rules and parameters.
 
-## Creating a Simulation
+<Steps>
+    <Step title="Choose a content type">
+    
+    ![Content Types](/images/contexts.png)
 
-To set up a new simulation, you need to configure several key components:
+    When you click ‘create test’, the content types menu will appear. The content type determines how your message reaches the personas in the society. It also informs the kinds of actions the personas can take, and the way the variants are written.
+    </Step>
+    
+    <Step title="Write your message">
+    
+    ![Draft a Message](/images/draft.png)
 
-### Basic Setup
-- **Name**: Descriptive name for your simulation
-- **Society**: Which society to use for the experiment
-- **Duration**: How long the simulation should run
-- **Scenario**: What situation or context to simulate
+    Once you have selected your content type, the next step is to draft the content. For example, for a LinkedIn post, you write the draft of the content you would like to simulate. This is different to a chatbot where you might ask a question.
 
-### Parameters
-- **Environment**: The setting and conditions for the simulation
-- **Events**: Specific triggers or situations to introduce
-- **Metrics**: What data to collect and analyze
+    **Upload an image or PDF**
 
-## Simulation Types
+    You can upload an image or PDF by clicking the upload button. Anything that you upload will be presented to the personas alongside your message. In some cases, you may want to leave the message blank and just upload an image, for example when testing a website homepage.
+    
+    **Help Me Craft**
 
-### Communication Simulations
-Test how information flows through your society and how personas respond to messages.
+    If you need help coming up with content to post about, Amos, our social intelligence engine, is here to help. He can help you come up with ideas about what to write about and write a first draft for you. Amos knows the context of you as an author, your audience, and the type of content you’re trying to simulate. If you’d like to create content out of an image or PDF, upload this to Amos and he’ll use it as inspiration when coming up with a draft.
+    </Step>
+    
+    <Step title="Run the Simulation">
+    
+    ![Run the Simulation](/images/simulation.png)
 
-### Decision-Making Simulations
-Observe how groups make decisions and reach consensus on various topics.
+    Click simulate to start the experiment. We introduce your message to every AI persona and run thousands of LLM calls to simulate realistic social dynamics and interactions between personas.
+    </Step>
+</Steps>
 
-### Crisis Response Simulations
-Test how societies handle unexpected events or challenges.
+### Simulations FAQ
 
-### Social Network Simulations
-Study how relationships and connections evolve over time.
+<Accordion title="How do I run A/B tests?">
+    You can easily run A/B tests—and even multivariate experiments—with Artificial Societies. To test different versions of your message, click <strong>create new test</strong> for each variant you want to simulate. There’s no limit to the number of alternatives you can compare, so you can explore as many options as you need to find what resonates best with your personas.
+</Accordion>
 
-## Running Simulations
+<Accordion title="How long do simulations take to run?">
+Simulation duration depends on the size of your message and whether you have included any attachments. Short messages with no attachments typically complete in 30 seconds to a minute, while larger messages may take up to 5 minutes. If you feel like your simulation has become stuck, copy your draft and hit refresh to see if your result has arrived.
+</Accordion>
 
-### Starting a Simulation
-```javascript
-// Create and start a new simulation
-const simulation = new Simulation({
-  society: 'tech-startup',
-  duration: '7 days',
-  scenario: 'product-launch'
-});
-
-simulation.start();
-```
-
-### Monitoring Progress
-```javascript
-// Check simulation status
-simulation.getStatus();
-
-// Get real-time metrics
-simulation.getMetrics();
-```
-
-### Pausing and Resuming
-```javascript
-// Pause simulation
-simulation.pause();
-
-// Resume simulation
-simulation.resume();
-```
-
-## Example Simulation Configuration
-
-```json
-{
-  "name": "Product Launch Crisis",
-  "society": "tech-startup",
-  "duration": "5 days",
-  "scenario": {
-    "type": "crisis-response",
-    "trigger": "server-outage",
-    "severity": "high"
-  },
-  "metrics": [
-    "response-time",
-    "communication-frequency",
-    "decision-quality",
-    "stress-levels"
-  ],
-  "events": [
-    {
-      "day": 2,
-      "event": "customer-complaints",
-      "intensity": "medium"
-    },
-    {
-      "day": 3,
-      "event": "press-inquiry",
-      "intensity": "high"
-    }
-  ]
-}
-```
-
-## Analyzing Results
-
-### Data Collection
-Simulations automatically collect data on:
-- Communication patterns
-- Decision-making processes
-- Response times
-- Stress levels
-- Network changes
-
-### Visualization
-View results through:
-- Interactive charts and graphs
-- Timeline visualizations
-- Network diagrams
-- Statistical analysis
-
-### Export Options
-```javascript
-// Export simulation results
-simulation.exportResults({
-  format: 'json',
-  includeMetrics: true,
-  includeTimeline: true
-});
-```
-
-## Best Practices
-
-<Tip>
-Start with short simulations (1-3 days) to validate your setup before running longer experiments.
-</Tip>
-
-<Warning>
-Complex simulations with many personas and events can be resource-intensive. Monitor system performance during execution.
-</Warning>
-
-### Simulation Design Tips
-- Define clear objectives before starting
-- Use realistic scenarios and parameters
-- Include control groups when possible
-- Document your assumptions and methodology
-- Run multiple iterations to ensure reliability
-
-## Advanced Features
-
-### Custom Events
-Create custom events to test specific scenarios:
-```javascript
-simulation.addCustomEvent({
-  trigger: 'user-defined-condition',
-  action: 'custom-response',
-  parameters: { /* custom data */ }
-});
-```
-
-### A/B Testing
-Compare different configurations:
-```javascript
-// Run simulation with configuration A
-const resultA = simulation.run(configA);
-
-// Run simulation with configuration B  
-const resultB = simulation.run(configB);
-
-// Compare results
-simulation.compareResults(resultA, resultB);
-```
-
-## Next Steps
-
-- Learn about [Societies](/features/societies) to understand your simulation participants
-- Explore [Personas](/features/personas) to customize individual behaviors
-- Check [Settings](/features/settings) to configure simulation parameters 
+<Accordion title="How accurate are the simulation results?">
+Our simulations use advanced AI models trained on real social media data and behavioral patterns. While no simulation can perfectly predict real-world outcomes, our results have shown strong correlation with actual engagement rates and user responses. More details can be found on our landing page.
+</Accordion>
