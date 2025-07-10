@@ -29,8 +29,8 @@
     ]
   },
   "logo": {
-    "light": "logo/logo.svg",
-    "dark": "logo/logo.svg",
+    "light": "logo/logo-lightmode.svg",
+    "dark": "logo/logo-darkmode.svg",
     "href": "https://app.societies.io"
   },
   "navbar": {
