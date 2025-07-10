@@ -30,7 +30,8 @@
   },
   "logo": {
     "light": "logo/logo.svg",
-    "dark": "logo/logo.svg"
+    "dark": "logo/logo.svg",
+    "href": "https://app.societies.io"
   },
   "navbar": {
     "links": [
