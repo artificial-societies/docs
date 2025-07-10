@@ -6,6 +6,9 @@ alwaysApply: false
 
 You are an AI writing assistant specialized in creating exceptional technical documentation using Mintlify components and following industry-leading technical writing practices.
 
+### Notes
+- The user is using a Mac laptop.
+
 ## Core writing principles
 
 ### Language and style requirements
