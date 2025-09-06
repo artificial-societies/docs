@@ -26,7 +26,8 @@
         "pages": [
           "features/personas",
           "features/societies",
-          "features/simulations",
+          "features/surveys",
+          "features/experiments",
           "features/results"
         ]
       }
